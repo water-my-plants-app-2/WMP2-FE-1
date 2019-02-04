@@ -1,6 +1,6 @@
 import React from 'react';
-
-import PlantListView from '../views/PlantListView';
+import HomeView from '../views/HomeView';
+import Login from './Login';
 
 const authenticate = App => Login =>
 class extends React.Component{
@@ -20,7 +20,7 @@ class extends React.Component{
     }
 
     render(){
-        if(this.state.isLoggedIn) return <PlantListView />
+        if(this.state.isLoggedIn) return <HomeView />
         return <Login />
     }
 }

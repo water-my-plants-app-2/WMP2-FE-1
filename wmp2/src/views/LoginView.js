@@ -14,3 +14,4 @@ class LoginView extends React.Component {
     } 
     
 }
+export default LoginView;
