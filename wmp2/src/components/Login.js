@@ -47,15 +47,16 @@ class Login extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="Login">
                 <form>
                     <h1>Water My Plants</h1>
                     <p>So your plants never go thirsty.</p>
                     <input type="text" name="username" value={this.state.username} placeholder="Username" onChange={this.changeHandler} required />
                     <input type="text" name="password" value={this.state.password} placeholder="Password" onChange={this.handleChanges} required />
                     {/* <button onClick={this.onLogin}>Login</button> */}
-                    <button class="push_button blue" href="#">Login</button>
+                    
                 </form>
+                <button class="push_button blue" href="#">Login</button>
             </div>
            
         )
