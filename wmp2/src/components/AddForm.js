@@ -10,7 +10,7 @@ class AddForm extends React.Component {
                 description: '',
                 characteristic: '',
                 lastWater:'',
-                nextWter: '',
+                nextWater: '',
                 imgUrl: ''
             },
             isUpdating: false

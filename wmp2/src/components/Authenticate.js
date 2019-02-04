@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeView from '../views/HomeView';
-import Login from './Login';
+// import Login from './Login';
 
 const authenticate = App => Login =>
 class extends React.Component{

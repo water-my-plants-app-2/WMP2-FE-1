@@ -5,12 +5,12 @@ import Button from '@material-ui/core/Button';
 
 function Home(props){
     
-    const routeToPlants = e => {
+    const toPlantsList = e => {
         e.preventDefault();
         props.history.push(`/plant-list`);
     };
 
-    const routeToForm = e => {
+    const toPlantForm = e => {
         e.preventDefault();
         props.history.push(`/plant-form`);
     };

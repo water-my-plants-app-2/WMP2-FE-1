@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 function NavBar(props){
     return(
         <div>
-            <NavLink to="/">Plant List</NavLink>
-            <NavLink to="/">Add a Plant</NavLink>
+            <NavLink to="/">Check out the Plant List</NavLink>
+            <NavLink to="/">Add a Plant Here! Form</NavLink>
             <NavLink to="/">Home</NavLink>
         </div>
     );

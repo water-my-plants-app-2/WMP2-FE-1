@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from '../components/Home';
+import NavBar from '../components/NavBar';
 
 class HomeView extends React.Component {
     constructor(props) {
@@ -9,7 +10,11 @@ class HomeView extends React.Component {
 
     render(){
         return(
-            <Home />
+            <div>
+                <NavBar />
+                <Home />   
+            </div>
+           
         )
     } 
     
