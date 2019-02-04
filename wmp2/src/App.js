@@ -4,14 +4,18 @@ import './App.css';
 import authenticate from './components/Authenticate';
 import HomeView from './views/HomeView';
 import LoginView from './views/LoginView';
-import {connect} from 'react-redux';
-import {checkCheck} from './store/reducers/UserReducer'
 
+import {connect} from 'react-redux';
+import {testItem} from './store/actions/UserAction'
 
 class App extends Component {
+  componentDidMount = () => this.props.testItem();
+
   render() {
+    const{message} = this.props;
     return (
       <div className="App">
+        <p>{message}</p>
         <Conditional />
       </div>
     );
@@ -20,9 +24,9 @@ class App extends Component {
 
 const Conditional = authenticate(HomeView)(LoginView)
 
-// const mapStateToProps = state => ({
-//   message:state.message
-// })
+const mapStateToProps = state => ({
+  message:state.message
+})
 
-// export default connect(mapStateToProps,{checkCheck})(App);
-export default App;
+export default connect(mapStateToProps,{testItem})(App);
+// export default App;
