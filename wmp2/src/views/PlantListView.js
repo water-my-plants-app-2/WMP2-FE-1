@@ -8,22 +8,19 @@ class PlantListView extends React.Component{
             plants:[]
         }
     }
-
     componentDidMount(){
         axios
-        .get('https://wmp2-back-end.herokuapp.com/api/usersunp/')
+        .get('https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants')
         .then(res =>{
             this.setState({plants:res.data})
         })
         .catch(err => err)
     }
-
     render(){
         return(
             <PlantList 
                 plants={this.state.plants}
             />
-
         )
     }
 }

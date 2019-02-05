@@ -54,6 +54,17 @@ class AddForm extends React.Component {
         this.setState({[e.target.name]: e.target.value});
     }
 
+    addPlant = e => {
+        e.preventDefault();
+        axios
+        .post('https://wmp2-back-end.herokuapp.com/api/plantsunp/4')
+        .then(res => {
+            this.setState({ friends: res.data });
+            this.props.history.push('/plant-list')
+        })
+        .catch(err => console.log(err));
+    }
+
     render(){
         return (
             <div>
@@ -65,6 +76,9 @@ class AddForm extends React.Component {
                     <input onChange={this.handleInputChange} placeholder="Next Water" value={this.state.nextWater} name="nextWater" />
                     <input onChange={this.handleInputChange} placeholder="Image URL" value={this.state.imageUrl} name="imageUrl" />
                 </form>
+                <button onClick={this.addPlant}>
+                    Add Plant
+                </button>  
             </div>
         )
     }

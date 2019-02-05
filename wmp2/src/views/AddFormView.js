@@ -1,5 +1,6 @@
 import React from 'react';
 import AddForm from '../components/AddForm';
+import axios from 'axios';
 
 class AddFormView extends React.Component {
     constructor(props){
@@ -7,9 +8,15 @@ class AddFormView extends React.Component {
         this.setState={}
     }
 
+   
+
     render(){
         return(
-            <AddForm />
+            <div>
+                <AddForm addPlant={this.addPlant}/>
+                 
+            </div>
+            
         )
     }
 }

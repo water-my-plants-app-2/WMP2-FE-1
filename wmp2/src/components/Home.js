@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Button from '@material-ui/core/Button';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import AddForm from './AddForm'
 
 function Home(props){
     
@@ -15,8 +16,10 @@ function Home(props){
         props.history.push(`/plant-form`);
     };
 
+    
+
     return(
-        <div className="homeWrapper">
+        <div className="HomeContainer">
                 <h2>Plants Home Page</h2>
             <div>
                 Plants List
@@ -24,7 +27,7 @@ function Home(props){
             </div>
             <div>
                 Add a New Plant
-                <Button>Plant Form</Button>
+                <Link exact to={AddForm}>Plant Form</Link>
             </div>
         </div>
     );
