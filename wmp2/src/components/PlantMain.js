@@ -12,7 +12,10 @@ class PlantMain extends React.Component{
             <div>
                 <h1>{this.props.name}</h1>
                 <p>Description: {this.props.description}</p>
+                <p>Characteristics: {}this.props.characteristics</p>
                 <p>Last Watered: {this.props.lastWater}</p>
+                <p>Next Watering: {this.props.nextWater}</p>
+                
                 <button onClick={e => {
                     e.preventDefault();
                     console.log('button clicked!!!!!')
