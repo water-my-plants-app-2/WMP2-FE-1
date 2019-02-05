@@ -3,6 +3,7 @@ import PlantMain from './PlantMain';
 
 // need to wait until Backend api info for axios calls
 const PlantList = props => {
+    // console.log(props.plants)
     return(
         <div>
             {props.plants.map(plant =>
@@ -15,6 +16,8 @@ const PlantList = props => {
                lastWater={plant.lastWater}
                characteristic={plant.characteristic}
                imgUrl={plant.imgUrl}
+               deletePlant={props.deletePlant}
+               id={plant.id}
                 />)}
         </div>
     )

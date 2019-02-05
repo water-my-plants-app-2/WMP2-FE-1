@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+const baseURL = 'https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants'
+
 class AddForm extends React.Component {
     constructor(props) {
         super(props);
@@ -18,9 +20,9 @@ class AddForm extends React.Component {
         }
     }
 
-    addNewPlant = event =>{
+    addNewPlant = event => {
         event.preventDefault();
-        axios.post('https://wmp2-back-end.herokuapp.com/api/usersunp/7/plants')
+        axios.post(`${baseURL}`)
         .then(res => {
             this.setState({ state:res.data })
             this.props.history.push('/plants')
@@ -29,7 +31,7 @@ class AddForm extends React.Component {
     }
 
     updatePlant = ()  => {
-        axios.put('https://wmp2-back-end.herokuapp.com/api/plantsunp', this.state.plant)
+        axios.put(`https://wmp2-back-end.herokuapp.com/api/plantsunp/${this.state.plant.id}`, this.state.plant)
         .then(res => {
             this.setState({
                 plants: res.data,

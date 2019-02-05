@@ -7,12 +7,17 @@ class PlantMain extends React.Component{
     }
 
     render(){
+
         return(
             <div>
                 <h1>{this.props.name}</h1>
                 <p>Description: {this.props.description}</p>
                 <p>Last Watered: {this.props.lastWater}</p>
-                <button>Delete Plant</button>
+                <button onClick={e => {
+                    e.preventDefault();
+                    console.log('button clicked!!!!!')
+                    this.props.deletePlant(this.props.id)
+                }}>Delete Plant</button>
                 <button>Update Plant Info</button>
 
             </div>
