@@ -58,11 +58,13 @@ class AddForm extends React.Component {
 
     addPlant = e => {
         e.preventDefault();
+        console.log('plant adding')
         axios
-        .post('https://wmp2-back-end.herokuapp.com/api/plantsunp/4')
+        .post('https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants')
         .then(res => {
-            this.setState({ friends: res.data });
+            this.setState({ plants: res.data });
             this.props.history.push('/plant-list')
+            console.log(res.data)
         })
         .catch(err => console.log(err));
     }

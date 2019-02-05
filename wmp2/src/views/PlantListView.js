@@ -23,7 +23,7 @@ class PlantListView extends React.Component{
     deletePlant = plantId => {
         console.log('delete plant is called')
         axios
-        .delete(`DeleteURL${plantId}`)
+        .delete(`${DeleteURL}${plantId}`)
         .then(res => {
             const newPlants = this.state.plants.filter(plant => plant.id !== plantId)
             this.setState({plants:newPlants});
