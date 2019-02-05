@@ -34,6 +34,28 @@ class PlantListView extends React.Component{
             console.log(err)
         });
     };
+
+    updatePlant = ()  => {
+            axios.put(`https://wmp2-back-end.herokuapp.com/api/plantsunp/${this.state.plant.id}`, this.state.plant)
+            .then(res => {
+                this.setState({
+                    plants: res.data,
+                    isUpdating: false,
+                    // plant: {
+                    //     name:'',
+                    //     description: '',
+                    //     characteristic: '',
+                    //     lastWater:'',
+                    //     nextWater: '',
+                    //     imgUrl: ''
+                    // }
+                });
+                this.props.history.push('/plants')
+            })
+            .catch(err => {
+                console.log('update not working', err);
+            })
+        }
     render(){
         return(
             <PlantList 

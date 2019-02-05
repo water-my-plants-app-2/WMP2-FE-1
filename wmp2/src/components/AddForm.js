@@ -22,11 +22,11 @@ class AddForm extends React.Component {
     }
 
    
-    // updatePlant = ()  => {
-    //     axios.put(`https://wmp2-back-end.herokuapp.com/api/plantsunp/${this.state.plant.id}`, this.state.plant)
+    // updatePlant = plantId  => {
+    //     axios.put(`https://wmp2-back-end.herokuapp.com/api/plantsunp/${plantId}`, this.state.plant)
     //     .then(res => {
     //         this.setState({
-    //             plants: res.data,
+    //             // plants: res.data,
     //             isUpdating: false,
     //             plant: {
     //                 name:'',
@@ -76,7 +76,7 @@ class AddForm extends React.Component {
                     <input onChange={this.handleInputChange} placeholder="Characteristics" value={this.state.characteristic} name="characteristic" />
                     <input onChange={this.handleInputChange} placeholder="Last Watered" value={this.state.lastWater} name="lastWater" />
                     <input onChange={this.handleInputChange} placeholder="Next Water" value={this.state.nextWater} name="nextWater" />
-                    <input onChange={this.handleInputChange} placeholder="Image URL" value={this.state.imageUrl} name="imageUrl" />
+                    <input onChange={this.handleInputChange} placeholder="Image URL" value={this.state.img_url} name="img_url" type="text" />
                 </form>
                 <button onClick={this.addPlant}>
                     Add Plant

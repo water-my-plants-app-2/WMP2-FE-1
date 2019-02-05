@@ -15,7 +15,7 @@ const PlantList = props => {
                nextWater={plant.nextWater}
                lastWater={plant.lastWater}
                characteristic={plant.characteristic}
-               imgUrl={plant.imgUrl}
+               img_url={plant.img_url}
                deletePlant={props.deletePlant}
                id={plant.id}
                 />)}
