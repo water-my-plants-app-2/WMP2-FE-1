@@ -6,7 +6,7 @@ import HomeView from './views/HomeView';
 import LoginView from './views/LoginView';
 import {Route} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {testItem} from './store/actions/UserAction';
+import {addPlant} from './store/actions/UserAction';
 import PlantListView from './views/PlantListView';
 import AddForm from './components/AddForm'
 
@@ -56,5 +56,5 @@ const mapStateToProps = state => ({
   message:state.message
 })
 
-export default connect(mapStateToProps,{testItem})(App);
+export default connect(mapStateToProps,{addPlant})(App);
 // export default App;
