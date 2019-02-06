@@ -11,7 +11,20 @@ import PlantListView from './views/PlantListView';
 import AddForm from './components/AddForm'
 
 class App extends Component {
-  componentDidMount = () => this.props.testItem();
+  // componentDidMount = () => this.props.testItem();
+  state ={
+    item:null,
+    isUpdating:false
+  }
+
+  populateForm = (item) => {
+    // e.preventDefault();
+    this.setState({
+        item,
+        isUpdating:true
+    });
+    this.props.history.push("/plant-form");
+  };
 
   render() {
     const{message} = this.props;
@@ -22,10 +35,15 @@ class App extends Component {
         <Route path="/plant-list" render={props => (
           <PlantListView 
           {...props}
+          populateForm={this.populateForm}
+          
           />
         )} />
          <Route exact path="/plant-form" render={props => (
-          <AddForm {...props} />
+          <AddForm {...props} 
+          isUpdating={this.state.isUpdating}
+          item={this.state.item}
+          />
         )}/>
       </div>
     );

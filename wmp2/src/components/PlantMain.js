@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 class PlantMain extends React.Component{
     constructor(props){
@@ -6,6 +8,11 @@ class PlantMain extends React.Component{
         this.state={} 
     }
 
+    populateForm1 = (e,id) => {
+       e.preventDefault();
+       const item = this.props.plants.find(plant => plant.id === id)
+       this.props.populateForm(item);
+   }
     render(){
 
         return(
@@ -21,7 +28,7 @@ class PlantMain extends React.Component{
                     console.log('button clicked!!!!!')
                     this.props.deletePlant(this.props.id)
                 }}>Delete Plant</button>
-                <button>Update Plant Info</button>
+                <Link to="plant-form"><button onClick={e => this.populateForm1(e, this.props.plant.id)}>Update Form</button></Link>
 
             </div>
         )

@@ -1,7 +1,6 @@
 import React from 'react';
 import PlantList from '../components/PlantList';
 import axios from 'axios';
-
 const baseURL = 'https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants';
 const DeleteURL = 'https://wmp2-back-end.herokuapp.com/api/plantsunp/'
 class PlantListView extends React.Component{
@@ -11,6 +10,7 @@ class PlantListView extends React.Component{
             plants:[]
         }
     }
+
     componentDidMount(){
         axios
         .get(`${baseURL}`)
@@ -35,32 +35,17 @@ class PlantListView extends React.Component{
         });
     };
 
-    updatePlant = ()  => {
-            axios.put(`https://wmp2-back-end.herokuapp.com/api/plantsunp/${this.state.plant.id}`, this.state.plant)
-            .then(res => {
-                this.setState({
-                    plants: res.data,
-                    isUpdating: false,
-                    // plant: {
-                    //     name:'',
-                    //     description: '',
-                    //     characteristic: '',
-                    //     lastWater:'',
-                    //     nextWater: '',
-                    //     imgUrl: ''
-                    // }
-                });
-                this.props.history.push('/plants')
-            })
-            .catch(err => {
-                console.log('update not working', err);
-            })
-        }
+    
+
+
     render(){
         return(
             <PlantList 
                 plants={this.state.plants}
                 deletePlant={this.deletePlant}
+                updatePlant={this.props.updatePlant}
+                populateForm={this.props.populateForm}
+                history={this.props.history}
             />
         )
     }

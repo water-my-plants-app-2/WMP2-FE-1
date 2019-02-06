@@ -10,6 +10,8 @@ const PlantList = props => {
                <PlantMain 
                key={plant.id}
                name={plant.name}
+               plants={props.plants}
+               history={props.history}
                plant={plant}
                description={plant.description}
                nextWater={plant.nextWater}
@@ -17,6 +19,8 @@ const PlantList = props => {
                characteristic={plant.characteristic}
                img_url={plant.img_url}
                deletePlant={props.deletePlant}
+               updatePlant={props.updatePlant}
+               populateForm={props.populateForm}
                id={plant.id}
                 />)}
         </div>
