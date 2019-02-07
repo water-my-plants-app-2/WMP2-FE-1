@@ -21,7 +21,7 @@ function NavBar(props){
                     <a href className='nav-link' ><NavLink to="/plant-list">Check out the Plant List</NavLink></a>
                 </li>
                 <li className ="nav-list-item">
-                    <a href className="nav-link"><NavLink to="/plant-form">Add a Plant Here! Form</NavLink></a>
+                    <a href className="nav-link"><NavLink to="/plant-form">Add a Plant Here</NavLink></a>
                 </li>
                 <li className ="nav-list-item">
                     <a href className ="nav-link"><NavLink to="/">Home</NavLink></a>

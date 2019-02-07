@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
 section{
     padding: 100px 0;
+    /* margin-right:00px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    /* display:flex; */
 }
 .details-card {
-	background: #ecf0f1;
+    padding: 50px 0;
+    background: #ecf0f1;
+    padding-left:35%;
+    
+}
+.row {
+    margin-right:0px;
 }
 
 .card-content {
 	background: #ffffff;
 	border: 4px;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    width:500px;
 }
 
 .card-img {
@@ -27,10 +39,10 @@ section{
 
 .card-img span {
 	position: absolute;
-    top: 15%;
-    left: 12%;
+    top: 8%;
+    left: 15%;
     background: #1ABC9C;
-    padding: 6px;
+    padding: 12px;
     color: #fff;
     font-size: 12px;
     border-radius: 4px;
@@ -41,13 +53,15 @@ section{
     transform: translate(-50%,-50%);
 }
 .card-img span h4{
-        font-size: 12px;
+        font-size: 15px;
+        font-family: 'Futura';
         margin:0;
         padding:10px 5px;
          line-height: 0;
 }
 .card-desc {
-	padding: 1.25rem;
+    padding: 1.25rem;
+    background:#bbe5cb;
 }
 
 .card-desc h3 {
@@ -69,7 +83,7 @@ section{
 	margin: 0px;
 	margin-bottom: 20px;
 	padding: 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Futura', sans-serif;
 }
 .btn-card{
 	background-color: #1ABC9C;
@@ -93,7 +107,7 @@ section{
     color: #fff;
 }
 .btn-card:hover {
-    background: orange;
+    background: #dee7e1;
 }
 a.btn-card {
     text-decoration: none;

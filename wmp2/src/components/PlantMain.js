@@ -22,7 +22,7 @@ class PlantMain extends React.Component{
     render(){
 
         return(
-            <section class="details-card">
+            <div class="details-card">
                 <div className="contianer">
                     <div className="row">
                         <div className="col-md-4">
@@ -67,7 +67,7 @@ class PlantMain extends React.Component{
                 </div>
                 
 
-            </section>
+            </div>
         )
     }
 }
