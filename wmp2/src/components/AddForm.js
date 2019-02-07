@@ -6,19 +6,41 @@ import {withRouter} from 'react'
 const AddForm = (props) => {
     
         return (
-            <div>
-                <form autoComplete="off" onSubmit={props.addPlant}>
-                    <input onChange={props.handleInputChange} placeholder="Name" value={props.item.name} name="name" />
-                    <input onChange={props.handleInputChange} placeholder="Description" value={props.item.description} name="description" />
-                    <input onChange={props.handleInputChange} placeholder="Characteristics" value={props.item.characteristic} name="characteristic" />
-                    <input onChange={props.handleInputChange} placeholder="Last Watered" value={props.item.lastWater} name="lastWater" />
-                    <input onChange={props.handleInputChange} placeholder="Next Water" value={props.item.nextWater} name="nextWater" />
-                    <input onChange={props.handleInputChange} placeholder="Image URL" value={props.item.img_url} name="img_url" type="text" />
-                </form>
-                <button onClick={props.addPlant}>
-                    Add Plant
-                </button>  
-                <button onClick={props.updatePlant}>{props.isUpdating ? 'Update item' : 'Add new Item'}</button>
+            <div className="container">
+                <div classname="row">
+                        <form  role="form" className="col-md-9 go-right" autoComplete="off" onSubmit={props.addPlant}>
+                            <h2>Add or Update a Plant Here</h2>
+                            <div className="form-group">
+                                <input  id="name" className="form-control" onChange={props.handleInputChange} placeholder="Name" value={props.item.name} name="name" required />
+                                <label for="name">Name</label>
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" id="description" onChange={props.handleInputChange} placeholder="Description" value={props.item.description} name="description" />  
+                                <label for="description">Description</label>
+                            </div>
+                            <div className="form-group">
+                            <input className="form-control" id="characteristic" onChange={props.handleInputChange} placeholder="Characteristics" value={props.item.characteristic} name="characteristic" />
+                            <label for="characteristic">Characteristics</label>
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" id="lastWater" onChange={props.handleInputChange} placeholder="Last Watered" value={props.item.lastWater} name="lastWater" />
+                                <label for="lastWater">Last Watered</label>
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" id="nextWater" onChange={props.handleInputChange} placeholder="Next Watering" value={props.item.nextWater} name="nextWater" />
+                                <label for="nextWater">Next Watering</label>
+                            </div>
+                            <div className="form-group">
+                                <input className="img_url" id="img_url" onChange={props.handleInputChange} placeholder="Image URL" value={props.item.img_url} name="img_url" type="text" />
+                                <label for="img_url">Image URL</label>
+                            </div>
+                        </form>
+                    <button onClick={props.addPlant}>
+                        Add Plant
+                    </button>  
+                    <button onClick={props.updatePlant}>{props.isUpdating ? 'Update item' : 'Add new Item'}</button>
+                </div>
+                
             </div>
         )
     }
