@@ -2,7 +2,7 @@ import React from 'react';
 import PlantList from '../components/PlantList';
 import axios from 'axios';
 const baseURL = 'https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants';
-const DeleteURL = 'https://wmp2-back-end.herokuapp.com/api/plantsunp/'
+const DeleteURL = 'https://wmp2-back-end.herokuapp.com/api/plantsunp/';
 class PlantListView extends React.Component{
     constructor(props){
         super(props);

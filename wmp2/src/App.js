@@ -32,6 +32,22 @@ class App extends Component {
     this.setState({item:{...this.state.item,[e.target.name]: e.target.value}});
 }
 
+// deletePlant = plantId => {
+//   console.log('delete plant is called')
+//   axios
+//   .delete(`${DeleteURL}${plantId}`)
+//   .then(res => {
+//       const newPlants = this.state.plants.filter(plant => plant.id !== plantId)
+//       this.setState({plants:newPlants});
+//       this.props.history.push('/plant-list');
+//       console.log(res.data)
+//   })
+//   .catch(err => {
+//       console.log(err)
+//   });
+// };
+
+
 addPlant = e => {
   e.preventDefault();
   console.log('plant adding')

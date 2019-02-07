@@ -34,7 +34,7 @@ class PlantMain extends React.Component{
                 <button onClick={e => {
                     e.preventDefault();
                     console.log('button clicked!!!!!')
-                    this.props.deletePlant(this.props.id)
+                    this.props.deletePlant(this.props.plant.id)
                 }}>Delete Plant</button>
                 <Link to="plant-form"><button onClick={e => this.populateForm1(e, this.props.plant.id)}>Update Form</button></Link>
 
