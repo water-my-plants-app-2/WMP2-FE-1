@@ -10,6 +10,7 @@ import {testItem} from './store/actions/UserAction';
 import PlantListView from './views/PlantListView';
 import AddForm from './components/AddForm'
 import axios from 'axios';
+import PlantScheduleView from './views/PlantScheduleView';
 const baseURL = 'https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants/';
 
 class App extends Component {
@@ -143,12 +144,14 @@ updatePlant = plantId  => {
           addPlant={this.addPlant}
           handleSubmit={this.handleSubmit}
           updatePlant={this.updatePlant}
-          />
-        )}/>
+         /> )}/>
+        {/* <Route path="/plant-schedule" render={props => (
+          <PlantScheduleView {...props} />
+        )} /> */}
       </div>
     );
   }
-}
+  }
 
 const Conditional = authenticate(HomeView)(LoginView)
 

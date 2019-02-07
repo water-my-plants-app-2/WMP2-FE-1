@@ -1,7 +1,7 @@
 import React from 'react';
 import PlantList from '../components/PlantList';
 import axios from 'axios';
-import ReactNotification from "react-notifications-component";
+// import ReactNotification from "react-notifications-component";
 
 const baseURL = 'https://wmp2-back-end.herokuapp.com/api/usersunp/4/plants';
 const DeleteURL = 'https://wmp2-back-end.herokuapp.com/api/plantsunp/';
@@ -68,10 +68,10 @@ class PlantListView extends React.Component{
                     populateForm={this.props.populateForm}
                     history={this.props.history}
                 />
-                <div className="Notifications">
+                {/* <div className="Notifications">
                     <ReactNotification ref={this.notificationDOMref} />
                     <button onClick={this.addNotification} classname="btn btn-primary">Add a Notification!</button>
-                </div>
+                </div> */}
 
             </div>
             

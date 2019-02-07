@@ -12,7 +12,7 @@ class HomeView extends React.Component {
         return(
             <div>
                 <NavBar />
-                <Home />   
+                {/* <Home />    */}
             </div>
            
         )
