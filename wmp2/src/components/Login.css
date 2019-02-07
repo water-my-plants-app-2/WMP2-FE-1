@@ -1,8 +1,14 @@
-.Login {
+ .Login {
     display:flex;
     flex-direction: column;
+    background:#c1f4c9;
 }
 
+
+
+/* ======================================================================================================================================================= */
+
+/*
 .push_button {
     position: relative;
     width:220px;
@@ -74,4 +80,4 @@
     background-image:-o-linear-gradient(top, #c1f4c9, #bbe5cb);
     background-image:linear-gradient(top, #c1f4c9, #bbe5cb);
 }
-
+ */
