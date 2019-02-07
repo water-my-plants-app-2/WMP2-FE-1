@@ -25,7 +25,11 @@ a {
     justify-content: center;
     width: 100%;
     height:1000px;
-    background:#dee7e1;
+    background-image: linear-gradient(#71cfae, #448e88,#bbe5cb);
+    background-image: -webkit-repeating-radial-gradient(#71cfae, #448e88,#bbe5cb);
+
+    /* background:#dee7e1;
+     */
     /* min-height: 100%; */
     /* padding: 20px; */
   }

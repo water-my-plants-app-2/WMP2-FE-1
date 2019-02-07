@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeView from '../views/HomeView';
 // import Login from './Login';
-
+import PlantListView from '../views/PlantListView';
 const authenticate = App => Login =>
 class extends React.Component{
     constructor(props){
