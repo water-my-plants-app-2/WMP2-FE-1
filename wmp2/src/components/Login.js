@@ -33,7 +33,7 @@ class Login extends React.Component {
                         <p className="fadeIn first">So your plants never go thirsty.</p>
                         <input type="text" className="fadeIn second" name="username" value={this.state.username} placeholder="Username" onChange={this.changeHandler} required />
                         <input type="text" className="fadeIn third" name="password" value={this.state.password} placeholder="Password" onChange={this.changeHandler} required />
-                        <input type="submit" className="fadeIn fourth" onSubmit={this.onLogin} />
+                        <input type="submit" className="fadeIn fourth" onClick={this.onLogin} />
                     </form>
 
                     <div id="formFooter">
