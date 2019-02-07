@@ -59,11 +59,8 @@ class PlantListView extends React.Component{
 
     render(){
         return(
-            <div><
-                div className="Notifications">
-                    <ReactNotification ref={this.notificationDOMref} />
-                    <button onClick={this.addNotification} classname="btn btn-primary">Add a Notification!</button>
-                </div>
+            <div>
+                
                 <PlantList 
                     plants={this.state.plants}
                     deletePlant={this.deletePlant}
@@ -71,7 +68,10 @@ class PlantListView extends React.Component{
                     populateForm={this.props.populateForm}
                     history={this.props.history}
                 />
-                
+                <div className="Notifications">
+                    <ReactNotification ref={this.notificationDOMref} />
+                    <button onClick={this.addNotification} classname="btn btn-primary">Add a Notification!</button>
+                </div>
 
             </div>
             
