@@ -11,8 +11,6 @@ class Login extends React.Component {
         }
     }
     
-    
-
     changeHandler = event => {
         this.setState({ [event.target.name]: event.target.value })
     }
@@ -25,16 +23,25 @@ class Login extends React.Component {
 
     render() {
         return(
-            <div className="Login">
-                <form>
-                    <h1>Water My Plants</h1>
-                    <p>So your plants never go thirsty.</p>
-                    <input type="text" name="username" value={this.state.username} placeholder="Username" onChange={this.changeHandler} required />
-                    <input type="text" name="password" value={this.state.password} placeholder="Password" onChange={this.changeHandler} required />
-                    {/* <button onClick={this.onLogin}>Login</button> */}
+            <div className="wrapper fadeInDown">
+                <div className="formContent">
+                    <div className="fadeIn first">
+                    <h1 className="fadeIn first">Water My Plants</h1>
+                    </div>
+                    <form>
+                        {/* <h1 className="fadeIn first">Water My Plants</h1> */}
+                        <p className="fadeIn first">So your plants never go thirsty.</p>
+                        <input type="text" className="fadeIn second" name="username" value={this.state.username} placeholder="Username" onChange={this.changeHandler} required />
+                        <input type="text" className="fadeIn third" name="password" value={this.state.password} placeholder="Password" onChange={this.changeHandler} required />
+                        <input type="submit" className="fadeIn fourth" onSubmit={this.onLogin} />
+                    </form>
+
+                    <div id="formFooter">
+                        {/* <button onClick={this.onLogin} className="push_button blue" href="#">Login</button> */}
+                        <a className="underlineHover" href>Forgot Password?</a>
+                    </div>
                     
-                </form>
-                <button onClick={this.onLogin} className="push_button blue" href="#">Login</button>
+                </div>  
             </div>
            
         )
