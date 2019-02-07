@@ -12,6 +12,14 @@ class PlantMain extends React.Component{
        e.preventDefault();
        const item = this.props.plants.find(plant => plant.id === id)
        this.props.populateForm(item);
+    //    this.setState={
+    //         name:'',
+    //         description:'',
+    //         characteristic: '',
+    //         lastWater:'',
+    //         nextWater: '',
+    //         img_url: '',
+    //         isUpdating:false       }
    }
     render(){
 

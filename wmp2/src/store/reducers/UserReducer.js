@@ -1,29 +1,25 @@
 import React from 'react';
 
 import {
-    ADD_PLANT_START,
-    ADD_PLANT_FAILURE,
-    ADD_PLANT_SUCCESS
+    CHECKCHECK_ERROR,
+    CHECKCHECK,
+    CHECKCHECK_SUCCESSFUL
 } from '../actions/UserAction';
 
 const initialState = {
-    plants:[]
-
+    message:''
 };
 
 
 
 export const UserReducer = (state = initialState, action) => {
     switch (action.type) {
-      case ADD_PLANT_SUCCESS: {
+      case CHECKCHECK_SUCCESSFUL: {
         return {
           ...state,
-          message: action.payload,
-          isUpdating:false
-
+          message: action.payload
         };
       }
-
   
     //   case CHECKCHECK:
     //   case CHECKCHECK_ERROR:

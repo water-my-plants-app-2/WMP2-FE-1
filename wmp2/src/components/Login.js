@@ -34,7 +34,7 @@ class Login extends React.Component {
                     {/* <button onClick={this.onLogin}>Login</button> */}
                     
                 </form>
-                <button onClick={this.onLogin} class="push_button blue" href="#">Login</button>
+                <button onClick={this.onLogin} className="push_button blue" href="#">Login</button>
             </div>
            
         )
