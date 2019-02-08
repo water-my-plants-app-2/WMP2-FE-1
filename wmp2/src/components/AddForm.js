@@ -2,16 +2,19 @@ import React from 'react';
 import axios from 'axios';
 import {withRouter} from 'react'
 // const baseUrl = "http://cors.io/?BACKENDURL"
+import './AddForm.css'
 
 const AddForm = (props) => {
     
+
         return (
             <div className="container">
                 <div classname="row">
+                {/* <h2>Add or Update</h2> */}
                         <form  role="form" className="col-md-9 go-right" autoComplete="off" onSubmit={props.addPlant}>
-                            <h2>Add or Update a Plant Here</h2>
+                        
                             <div className="form-group">
-                                <input  id="name" className="form-control" onChange={props.handleInputChange} placeholder="Name" value={props.item.name} name="name" required />
+                                <input  id="name" className="form-control" onChange={props.handleInputChange} placeholder="Name" value={props.item.name} name="name" />
                                 <label for="name">Name</label>
                             </div>
                             <div className="form-group">

@@ -3,6 +3,7 @@ a {
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
+    /* margin-left:-100px; */
   }
   
   h2 {
@@ -15,10 +16,6 @@ a {
     color: #cccccc;
   }
   
-  form {
-      margin-left:-70px;
-  }
-  
   /* STRUCTURE */
   
   .wrapper {
@@ -27,11 +24,17 @@ a {
     flex-direction: column; 
     justify-content: center;
     width: 100%;
-    min-height: 100%;
+    height:1000px;
+    background-image: linear-gradient(#71cfae, #448e88,#bbe5cb);
+    /* background-image: -webkit-repeating-radial-gradient(#71cfae, #448e88,#bbe5cb); */
+
+    /* background:#dee7e1;
+     */
+    min-height: 100%; 
     padding: 20px;
   }
   
-  #formContent {
+  .formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
@@ -43,12 +46,14 @@ a {
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
+    background:#dee7e1;
   }
   
-  #formFooter {
+  .formFooter {
     background-color: #f6f6f6;
     border-top: 1px solid #dce8f1;
-    padding: 25px;
+    padding: 25px ;
+    /* width:150px; */
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
@@ -73,6 +78,7 @@ a {
   
   input[type=button], input[type=submit], input[type=reset]  {
     background-color: #56baed;
+    width:100px;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -127,7 +133,7 @@ a {
   }
   
   input[type=text]:focus {
-    background-color: #fff;
+    background-color: rgba(16, 20, 224, 0.212);
     border-bottom: 2px solid #5fbae9;
   }
   
@@ -217,7 +223,6 @@ a {
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s;
-    margin-left:-0px;
   }
   
   /* Simple CSS3 Fade-in Animation */
@@ -252,3 +257,90 @@ a {
     width:60%;
   }
   
+ 
+ /* ======================================================================================================================================================= */
+
+ 
+ /* .Login {
+    display:flex;
+    flex-direction: column;
+    background:#c1f4c9;
+}
+ */
+
+
+/* ======================================================================================================================================================= */
+
+/*
+.push_button {
+    position: relative;
+    width:220px;
+    height:40px;
+    text-align:center;
+    color:#FFF;
+    text-decoration:none;
+    line-height:43px;
+    font-family:'Oswald', Helvetica;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    
+    
+}
+.push_button:before {
+    background:#dee7e1;
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#D0D0D0), to(#f0f0f0));
+    
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF; 
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF; 
+    box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+    
+    position: absolute;
+    content: "";
+    left: -6px; right: -6px;
+    top: -6px; bottom: -10px;
+    z-index: -1;
+}
+
+.push_button:active {
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset;
+    top:5px;
+}
+.push_button:active:before{
+    top: -11px;
+    bottom: -5px;
+    content: "";
+}
+
+.blue {
+    text-shadow:-1px -1px 0 #2C7982;
+    background: #c1f4c9;
+    border:1px solid #dee7e1;
+    background-image:-webkit-linear-gradient(top, #bbe5cb, #c1f4c9);
+    background-image:-moz-linear-gradient(top, #bbe5cb, #c1f4c9);
+    background-image:-ms-linear-gradient(top, #bbe5cb, #c1f4c9);
+    background-image:-o-linear-gradient(top, #bbe5cb, #c1f4c9);
+    background-image:linear-gradient(top, #bbe5cb, #c1f4c9);
+    
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+}
+
+.blue:hover {
+    background: #bbe5cb;
+    background-image:-webkit-linear-gradient(top, #c1f4c9, #bbe5cb);
+    background-image:-moz-linear-gradient(top, #c1f4c9, #bbe5cb);
+    background-image:-ms-linear-gradient(top, #c1f4c9, #bbe5cb);
+    background-image:-o-linear-gradient(top, #c1f4c9, #bbe5cb);
+    background-image:linear-gradient(top, #c1f4c9, #bbe5cb);
+}
+ */
