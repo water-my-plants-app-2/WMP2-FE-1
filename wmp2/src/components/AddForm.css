@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
+.buttonsdiv {
+	padding-right: 40%;
+}
+
 .container {
     padding-left:10%;
 }
@@ -10,7 +14,7 @@
 form {
 	width: 320px;
     margin: 20px;
-    padding-left:100px;
+    padding-left:350px;
 }
 
 
@@ -21,7 +25,7 @@ form > div {
 }
 form input {
 	width: 100%;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	background: none;
 	position: relative;
 	top: 0;
@@ -34,7 +38,7 @@ form input:valid{
 	background: white;
 }
 form input:focus{
-	border-color: #357EBD;
+	/* border-color: #357EBD; */
 }
 form input:focus + label{
 	background: #0c3d46;
@@ -85,3 +89,5 @@ form.go-right input:focus + label{
 	width: 40%;
 	padding-top: 5px;
 }
+
+

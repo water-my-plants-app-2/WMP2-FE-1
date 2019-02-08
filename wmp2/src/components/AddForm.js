@@ -2,10 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import {withRouter} from 'react'
 // const baseUrl = "http://cors.io/?BACKENDURL"
-import './AddForm.css'
+import './AddForm.css';
+import './FormButton.css';
+
+
 
 const AddForm = (props) => {
     
+   
 
         return (
             <div className="container">
@@ -34,14 +38,21 @@ const AddForm = (props) => {
                                 <label for="nextWater">Next Watering</label>
                             </div>
                             <div className="form-group">
-                                <input className="img_url" id="img_url" onChange={props.handleInputChange} placeholder="Image URL" value={props.item.img_url} name="img_url" type="text" />
+                                <input className="img_url" id="img_url" onChange={props.handleInputChange} placeholder="Image URL" value={props.item.img_url} name="img_url"  />
                                 <label for="img_url">Image URL</label>
                             </div>
                         </form>
-                    <button onClick={props.addPlant}>
-                        Add Plant
-                    </button>  
-                    <button onClick={props.updatePlant}>{props.isUpdating ? 'Update item' : 'Add new Item'}</button>
+                        <div className="buttonsdiv">
+                            <button class="back" onClick={props.addPlant}>
+                                AddPlant
+                            </button>
+                            <button className="button" onClick={props.updatePlant}>
+                                {props.isUpdating ? 'Update item' : 'Add new Item'}
+                            </button>
+                        </div>
+                       
+                     
+                    {/* <button ></button> */}
                 </div>
                 
             </div>
