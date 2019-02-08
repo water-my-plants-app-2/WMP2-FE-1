@@ -1,6 +1,6 @@
 import React from 'react';
-import './Login.css';
-
+// import './Login.css';
+import './LOGIN.css'
 
 class Login extends React.Component {
     constructor(props){
@@ -24,15 +24,20 @@ class Login extends React.Component {
     render() {
         return(
             <div className="wrapper fadeInDown">
-                <div className="formContent">
+                <div id="formContent">
+
                     <div className="fadeIn first">
-                    <h1 className="fadeIn first">Water My Plants</h1>
+                        <h1 className="fadeIn first">Water My Plants</h1>
+                        <h1 className="fadeIn first">So your plants never go thirsty.</h1>
                     </div>
+
                     <form>
-                        {/* <h1 className="fadeIn first">Water My Plants</h1> */}
-                        <p className="fadeIn first">So your plants never go thirsty.</p>
-                        <input autocomplete="off" type="text" className="fadeIn second" name="username" value={this.state.username} placeholder="Username" onChange={this.changeHandler} required />
-                        <input autocomplete="off" type="text" className="fadeIn third" name="password" value={this.state.password} placeholder="Password" onChange={this.changeHandler} required />
+                        
+                        {/* <p className="fadeIn first"></p> */}
+                        <input type="text" id="login" autocomplete="off"  className="fadeIn second" name="username" value={this.state.username} placeholder="Username" onChange={this.changeHandler} required />
+
+                        <input type="text" id="password" className="fadeIn third" autocomplete="off" name="password" value={this.state.password} placeholder="Password" onChange={this.changeHandler} required />
+
                         <input type="submit" className="fadeIn fourth" onClick={this.onLogin} />
                     </form>
 

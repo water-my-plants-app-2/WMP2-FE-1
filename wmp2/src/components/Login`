@@ -14,8 +14,18 @@ a {
     margin: 40px 8px 10px 8px; 
     color: #cccccc;
   }
+
+  form p {
+    margin-left:-350px;
+  }
+
+  form .second {
+    margin-left:-350px;
+  }
   
-  
+  /* form {
+      margin-left:-70px;
+  } */
   
   /* STRUCTURE */
   
@@ -83,7 +93,7 @@ a {
     box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-    /* margin: 5px 20px 40px 20px; */
+    margin: 5px 20px 40px 20px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -215,6 +225,7 @@ a {
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s;
+    margin-left:-0px;
   }
   
   /* Simple CSS3 Fade-in Animation */
